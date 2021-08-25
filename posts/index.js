@@ -7,6 +7,6 @@ const validator = require('express-joi-validation').createValidator({})
 
 router.post('/', validator.body(createSchema),create)
 router.get('/', getAll)
-router.get('/number', getCount)
+router.get('/count', getCount)
 
 export default router;

@@ -6,6 +6,6 @@ export const create = async ({ body: { ...post } }, res) => {
     res.sendStatus(200)
 }
 
-export const getAll = (req, res) => Post.find({})
+export const getAll = () => Post.find({})
 
-export const getCount = async (req, res) => ({ count: await Post.countDocuments() })
+export const getCount = async () => ({ count: await Post.countDocuments() })
