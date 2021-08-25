@@ -3,6 +3,9 @@ import PostsRouter from '../../post'
 
 export default () => {
     const app = express()
+
+    app.use(express.json());
+    
     app.use('/posts', PostsRouter)
 
     app.listen(process.env.PORT, () => {
