@@ -5,7 +5,8 @@ export default () => {
     const app = express()
 
     app.use(express.json());
-    
+    app.use(express.urlencoded());
+
     app.use('/posts', PostsRouter)
 
     app.listen(process.env.PORT, () => {
